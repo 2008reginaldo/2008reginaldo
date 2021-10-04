@@ -1,0 +1,9 @@
+1 - install screenfetch
+	sudo apt-get install screenfetch
+
+2 - Add the following lines to the end of you ~/.bashrc file (Optional)
+	echo '------------------------------------------->'
+	screenfetch
+	echo '           ***Viva o Linux***'
+	echo '------------------------------------------->' 
+ 

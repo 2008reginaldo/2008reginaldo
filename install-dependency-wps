@@ -1,0 +1,10 @@
+In order to install the .deb package (downloaded from the website) 
+one needs satisfy the dependency by installing libpng12-0.
+
+To do this, add the following line at the end of etc/apt/source.list:
+ 
+deb http://ubuntu.c3sl.ufpr.br/ubuntu xenial main
+
+Now, use synaptic to install libpng12-0
+
+Enjoy

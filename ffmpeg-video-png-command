@@ -1,0 +1,1 @@
+ffmpeg -ss 00:14:50 -t 00:00:59 -i zebra.mp4 -qscale:v 2 -r 10.0 zebra-stop/%4d.png

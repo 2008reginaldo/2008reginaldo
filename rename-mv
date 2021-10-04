@@ -1,0 +1,35 @@
+O exemplo é o seguinte:
+-----------------------------------------------
+I have
+
+aro_tty-mIF-45875564pmo_opt
+aro_tty-mIF-45875664pmo_opt
+aro_tty-mIF-45875964pmo_opt
+aro_tty-mIF-45875514pmo_opt
+aro_tty-mIF-45875524pmo_opt
+
+that I need to rename to
+
+aro_tty-mImpFRA-45875564pmo_opt
+aro_tty-mImpFRA-45875664pmo_opt
+aro_tty-mImpFRA-45875964pmo_opt
+aro_tty-mImpFRA-45875514pmo_opt
+aro_tty-mImpFRA-45875524pmo_opt
+
+-------------------------------------------------
+
+Primeiro método:
+
+for file in aro_tty-mIF-*_opt
+do
+    mv -i "${file}" "${file/-mIF-/-mImpFRA-}"
+done
+
+--------------------------------------------------
+
+Segundo método:
+
+for f in *_opt; do
+    a="$(echo $f | sed s/-mIF-/-mImpFRA-/)"
+    mv "$f" "$a"
+done

@@ -1,0 +1,4 @@
+ln -s /full/path/to/your/script/name.sh /usr/bin/name
+
+# Be sure there is no overlapping name there, because you would obviously override it. 
+# This also lets me keep them in my script in the original folder so I can adjust as necessary.

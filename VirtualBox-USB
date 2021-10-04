@@ -1,0 +1,5 @@
+#	First, make sure you have installed the ExtensionPack 
+#	for VirtualBox. Than one needs to add tha user to the vboxuser group.
+#	To do so, use the following command:
+
+sudo usermod -G vboxusers -a $USER

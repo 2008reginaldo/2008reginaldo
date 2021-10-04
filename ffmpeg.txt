@@ -1,0 +1,29 @@
+Exemplo 1: comando para transformar video em png 
+
+ffmpeg -i IMG_2273.MOV -f image2 -vcodec png %05d.png
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Exemplo 2: how can i convert a video to images using ffmpeg? Example am having a video with total 
+duration 60 seconds. I want images between different set of duration like between 2-6 seconds, 
+then between 15-24 seconds and so on. Is that possible using ffmpeg?
+
+ffmpeg -i in.mp4 -vf select='between(t,2,6)+between(t,15,24)' -vsync 0 out%d.png
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+Exemplo 3: I know it's possible with FFMPEG, but what to do if I have a partial file 
+(like without the beginning and the end). Is is possible to extract some frames from it?
+
+ffmpeg -ss 00:00:25 -t 00:00:00.04 -i YOURMOVIE.MP4 -r 25.0 YOURIMAGE%4d.jpg
+
+will extract frames
+beginning at second 25 [-ss 00:00:25]
+stopping after 0.04 second [-t 00:00:00.04]
+reading from input file YOURMOVIE.MP4
+using only 25.0 frames per second, i. e. one frame every 1/25 seconds [-r 25.0]
+as JPEG images with the names YOURIMAGE%04d.jpg, where %4d is a 4-digit autoincrement number 
+with leading zeros. Check you movie for the framerate before applying option [-r], same applicable 
+for [-t], unless you  want to extract the frames with the custom rate.

@@ -1,0 +1,26 @@
+Solution #2 (worked for me, Intuos S)
+If xsetwacom doesn't work, another, probably better way to do it is by using xinput. First detect the id's of your tablet again, by executing:
+
+xinput list | grep Wacom
+You should now see a couple of id's, the most important are stylus and eraser. 
+Then, find the attributes that set the constant deceleration, by executing this for as many device id's as you have (to exit press Ctrl+C):
+
+xinput watch-props <device id>
+You should see something like this in there:
+
+Device Accel Constant Deceleration (284):   1.000000
+The attribute's id is that number (in this case 284) at the end of the name. 
+Now in order to slow down the tablet movement, increase this number by executing:
+
+xinput set-prop <device id> <attribute id> <deceleration factor>
+An example:
+
+xinput set-prop 13 284 2.5 && xinput set-prop 15 284 2.5
+In this case, my stylus movement was device id 13 and my eraser id 15 so I set them both to 2.5, 
+which as far as I could tell about halved the movement speed.
+
+Again, these settings aren't saved at shutdown, so the best way is to have these settings be applied every time you boot. 
+There are many ways to accomplish this, but an exapmle would be adding this command to you .xinitrc in your home folder. 
+If this doesn't work, look for another way to have a command executed at boot on the internet.
+
+O comando "xinput set-prop 10 285 3" funcionou bem da ultima vez mas é necessário conferir se o ID (10, neste caso) não muda a cada reboot

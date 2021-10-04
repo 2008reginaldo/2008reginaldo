@@ -1,0 +1,5 @@
+Exemplo 1: comando para video em png
+
+ffmpeg -i IMG_2273.MOV -f image2 -vcodec png %05d.png
+
+Exemplo 2: magnet:?xt=urn:btih:f3f6846a99a9dcee9a96d001d504836f97473130&dn=Game.of.Thrones.S07E02.1080p.WEB.h264-TBS&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969

@@ -1,0 +1,17 @@
+baixe os pacotes .deb dos site do LibreOffice
+
+descompacte e navegue até a past DEB
+
+então:
+sudo su
+dkpg -i *.*
+
+
+Isto irá instalar todos os pacores .deb contidos na pasta
+
+Pronto !!
+
+
+
+
+ 

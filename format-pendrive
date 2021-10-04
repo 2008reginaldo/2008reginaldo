@@ -1,0 +1,14 @@
+# 	Enter in a super-user mode:
+1-	sudo su
+
+#	List all devices monted:
+2-	df -Th
+
+#	Umont the device: 
+3-	umont /media/reginaldo/nome-do-device
+
+#	Tentativa 1: tenta reparar o erro 'read-only' dos dispositivos no formato fat
+4-	dosfsck -a /dev/sdb-nome-do-device
+
+#	Tentativa 2: formatação do dispositivo:
+5-	mkfs.vfat /dev/sdb-nome-do-device	
